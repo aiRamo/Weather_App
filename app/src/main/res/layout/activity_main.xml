@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/cityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FIND CITY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/idButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/idButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save City"
+        app:layout_constraintEnd_toStartOf="@id/nameButton"
+        app:layout_constraintStart_toEndOf="@+id/cityButton"
+        app:layout_constraintTop_toTopOf="@+id/cityButton" />
+
+    <Button
+        android:id="@+id/nameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVED CITIES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/idButton"
+        app:layout_constraintTop_toTopOf="@+id/idButton" />
+
+    <EditText
+        android:id="@+id/et_dataInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="436dp"
+        android:ems="10"
+        android:hint="City Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_humidity" />
+
+    <TextView
+        android:id="@+id/tv_cityName"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tempMin"
+        android:layout_width="150dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_tempMax"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_temperature" />
+
+    <TextView
+        android:id="@+id/tv_temperature"
+        android:layout_width="0dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="4dp"
+        android:textAlignment="center"
+        android:textSize="72sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_weatherCond" />
+
+    <TextView
+        android:id="@+id/tv_humidity"
+        android:layout_width="150dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_feelsLike" />
+
+    <TextView
+        android:id="@+id/tv_feelsLike"
+        android:layout_width="300dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_temperature" />
+
+    <TextView
+        android:id="@+id/tv_tempMax"
+        android:layout_width="150dp"
+        android:layout_height="24dp"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_tempMin"
+        app:layout_constraintTop_toTopOf="@+id/tv_tempMin" />
+
+    <TextView
+        android:id="@+id/tv_weatherCond"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="8dp"
+
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cityName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
